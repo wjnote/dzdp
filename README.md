@@ -1,2 +1,7 @@
 # dzdp_react
-react仿照大众点评
+react模拟大众点评
+
+#技术栈 
+- webpack 3.5
+- node 6.11
+
