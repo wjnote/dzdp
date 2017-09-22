@@ -3,7 +3,8 @@ var path = require('path');
 module.exports = {
   context: __dirname + '/app', //源文件目录
   entry: {
-    app: './index.js' //在源文件目录下找 index文件，作为打包的入口文件
+    app: './index.js', //在源文件目录下找 index文件，作为打包的入口文件
+    vendor:['react', 'react-dom']
   },
   output: {
     path: __dirname + '/build/', //打包生成文件
@@ -11,7 +12,7 @@ module.exports = {
   },
 
   devServer: { // 配置webpack-dev-server
-    port: 8090,
+    port: 9000,
     inline: true,
     contentBase: "./build", 
     historyApiFallback: true
