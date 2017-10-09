@@ -16,7 +16,13 @@ module.exports = {
     port: 9000,
     inline: true,
     contentBase: "./build",
-    historyApiFallback: true
+    historyApiFallback: true,
+    proxy:{
+      '/api':{
+        target: "http://localhost:3000",
+        secure: false
+      }
+    }
   },
   resolve: {
     // order matters, resolves left to right

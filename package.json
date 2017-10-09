@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "dev": "webpack-dev-server --inline --hot"
+    "build": "webpack --config webpack.config.js",
+    "dev": "webpack-dev-server --inline --hot",
+    "mock": "node --harmony ./mock/server.js"
   },
   "author": "wujun",
   "license": "ISC",
   "devDependencies": {
     "html-webpack-plugin": "^2.30.1",
+    "koa": "^1.2.2",
+    "koa-body": "^1.6.0",
+    "koa-router": "^5.4.0",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.8.2"
   },
