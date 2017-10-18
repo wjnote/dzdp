@@ -17,6 +17,8 @@ module.exports = {
     inline: true,
     contentBase: "./build",
     historyApiFallback: true,
+    // 代理的转发， 凡事 '/api' 开头的http请求，都会被代理到 localhost:3000 上，由 koa 提供 mock 数据
+    // koa 代码在 ./mock 目录中，启动的命令为 npm run mock, 项目开发中mock的数据也会分模块
     proxy:{
       '/api':{
         target: "http://localhost:3000",
@@ -38,13 +40,9 @@ module.exports = {
           presets: ["react", "es2015"]
         }
       }],
-    }, { //这里的内容是新增加的对样式的支持
-      test: /\.css$/,
-      use: ["style-loader", "css-loader"],
-    }, {
-      test: /\.less$/,
-      use: ["style-loader", "css-loader", "less-loader"],
-    }]
+    }, 
+    { test: /\.css$/, use: ["style-loader", "css-loader"], }, 
+    { test: /\.less$/, use: ["style-loader", "css-loader", "less-loader"],}]
   },
   plugins: [
     // html 模板插件

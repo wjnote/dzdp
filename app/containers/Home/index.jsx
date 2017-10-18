@@ -1,12 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router';
+import HomeHeader from '../../components/HomeHeader';
 
 export default class App extends React.Component{
+	
 	render(){
 		return (
 			<div>
-				<h1>this is home11222</h1>
-				<Link to="/list">go to list</Link>
+				<HomeHeader/>
 			</div>
 		)
 	}

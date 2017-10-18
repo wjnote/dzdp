@@ -1,3 +1,4 @@
+// 设置localStorage，暴露出去的是一个对象
 export default {
     getItem: function (key) {
         let value

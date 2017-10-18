@@ -10,12 +10,12 @@ router.get('/api', function *(next) {
     this.body = 'test data'
 });
 router.get('/api/1', function *(next) {
-    this.body = 'test data 1'
+    this.body = 'test data1'
 });
 router.get('/api/2', function *(next) {
     this.body = {
         a: 1,
-        b: '123'
+        b: '123123123'
     }
 });
 
