@@ -7,15 +7,27 @@ class HomeHeader extends React.Component{
 	}
 	render(){
 		return (
-			<div className="clearfix header">
-				<div className="fl">深圳</div>
-				<div className="fr">
-					<i className="icon-shenfenzheng"></i>
+			<header className="header">
+
+				<div className="header-left">
+					<p>{this.props.cityName}</p>
+					<i className="iconfont icon-jiantouxia"></i>
 				</div>
-				<div><input type="text"/></div>
-			</div>
+				
+				<div className="header-content">
+					<div className="header-content-wrap">
+						<i className="iconfont icon-fangdajing"></i>&nbsp;
+						<input placeholder="请输入关键字" type="text"/>
+					</div>
+				</div>
+
+				<div className="header-right">
+					<i className="iconfont icon-shenfenzheng"></i>
+				</div>
+
+			</header>
 		)
 	}
-}	
+}
 
 export default HomeHeader;

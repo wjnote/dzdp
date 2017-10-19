@@ -30,13 +30,15 @@ class App extends React.Component {
     this.props.userinfoActions.update({
       cityName: cityName
     })
-
   }
 }
+
+/*            redux 绑定 react 中              */
 
 // 将redux的值注入到 props 中，可以直接使用
 function mapStateToProps(state) {
   return {
+    userinfo: state.userinfo
   }
 }
 // 将 redux 的方法注入到 props 中，

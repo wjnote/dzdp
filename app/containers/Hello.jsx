@@ -2,22 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 
-import * as userinfoActions from '../actions/userinfo';
-
-import A from '../components/A'
-import B from '../components/B'
-import C from '../components/C'
-
 class Hello extends React.Component {
 	render(){
 		return (
 			<div>
-				<p>Hello world</p>
-				<hr/>
 				<A userinfo = {this.props.userinfo}/>
-				<hr/>
 				<B userinfo = {this.props.userinfo}/>
-				<hr/>
 				<C actions = {this.props.userinfoActions}/>
 			</div>
 		)
@@ -29,6 +19,8 @@ class Hello extends React.Component {
 		})
 	}
 }
+
+// 下面是在组件中使用redux 的方式   获取state 和派发 dispatch  已经包装类
 function mapStateToProps(state){
 	return {
 		userinfo: state.userinfo

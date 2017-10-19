@@ -1,4 +1,56 @@
 .header{
-	height: 80px;
-	overflow: hidden;
+	height: 1rem;
+	padding: .2rem 0;
+	font-size: .3rem;
+	width: 100%;
+	color: #fff;
+	background-color: #f3394e;
+	display: flex;
+
+	.header-left{
+		width: auto;
+		line-height: .6rem;
+		margin: 0 0 0 .28rem;
+
+		p{
+			display: inline;
+			margin-right: .1rem;
+		}
+	}
+	
+	.header-content{
+		flex: 1;
+		position: relative;
+		margin: 0 .25rem 0 .15rem;
+	
+		.header-content-wrap{
+			width: auto;
+			height: .6rem;
+			border-radius: 1rem;
+			padding-left: .1rem;
+			background-color: #fff;
+		
+			i{
+				line-height: .6rem; 
+				color: #333;
+			}
+			input{
+				vertical-align: top;
+				height: .6rem;
+				padding: 0;
+				line-height: .6rem;
+				color: #333;
+				border:none;
+				outline: none;
+			}
+		}
+	}
+	.header-right{
+		width: .6rem;
+		margin-right: .28rem;
+
+		i{
+			font-size: .5rem;
+		}
+	}
 }

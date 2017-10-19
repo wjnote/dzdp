@@ -1,4 +1,4 @@
-// redux 第二步：根据计算规则生成
+// redux 第二步：根据计算规则生成 store
 
 import { createStore } from 'redux'
 import rootReducer from '../reducers'
