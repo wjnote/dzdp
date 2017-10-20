@@ -8,7 +8,6 @@ class HomeHeader extends React.Component{
 	render(){
 		return (
 			<header className="header">
-
 				<div className="header-left">
 					<p>{this.props.cityName}</p>
 					<i className="iconfont icon-jiantouxia"></i>
@@ -24,10 +23,13 @@ class HomeHeader extends React.Component{
 				<div className="header-right">
 					<i className="iconfont icon-shenfenzheng"></i>
 				</div>
-
 			</header>
 		)
 	}
 }
 
 export default HomeHeader;
+/*
+1、木偶组件显示城市
+2、右侧的个人中心
+*/
