@@ -9,9 +9,6 @@ import List from './subpage/List';
 class Home extends React.Component{
 	  constructor(props) {
 	    super(props);
-	    this.state = {
-	    	page: 1
-	    }
   }
 	render(){
 		return (
@@ -19,7 +16,7 @@ class Home extends React.Component{
 				<HomeHeader cityName={this.props.userinfo.cityName}/>
 				<Category/>
 				<Ad/>
-				<List cityName={this.props.userinfo.cityName} page={this.state.page}/>
+				<List cityName={this.props.userinfo.cityName}/>
 			</div>
 		)
 	}
