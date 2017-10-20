@@ -1,5 +1,5 @@
 import React from 'react';
-import {Router, Route, IndexRoute} from 'react-router';
+import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import App from '../containers';
 import Home from '../containers/Home';
 import NotFound from '../containers/404';
@@ -11,7 +11,7 @@ export default class RouteMap extends React.Component {
   }
   render() {
     return (
-      <Router history={this.props.history} onUpdate={this.updateHandle.bind(this)}>
+      <Router history={ hashHistory } onUpdate={this.updateHandle.bind(this)}>
 				<Route path="/" component={App}>
 					<IndexRoute component={Home}/>
 				</Route>
