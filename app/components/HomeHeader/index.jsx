@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import './style.less'
 
 class HomeHeader extends React.Component{
@@ -9,8 +10,10 @@ class HomeHeader extends React.Component{
 		return (
 			<header className="header">
 				<div className="header-left">
-					<p>{this.props.cityName}</p>
-					<i className="iconfont icon-jiantouxia"></i>
+					<Link to="city">
+						<p>{this.props.cityName}</p>
+						<i className="iconfont icon-jiantouxia"></i>
+					</Link>
 				</div>
 				
 				<div className="header-content">
