@@ -13,6 +13,7 @@ class App extends React.Component {
     }
   }
   render() {
+    /* 所有页面的父组件  其中可以设置所有页面通用的部分*/
     return (
       <div>
         { this.props.children }
@@ -33,8 +34,7 @@ class App extends React.Component {
   }
 }
 
-/*            redux 绑定 react 中              */
-
+/**********   redux 绑定 react 中  在顶部需要引入  bindActionCreators  userinfoActionsFormOtherFile ****/
 // 将redux的值注入到 props 中，可以直接使用
 function mapStateToProps(state) {
   return {
@@ -52,4 +52,3 @@ export default connect(
   mapDispatchToProps
 )(App)
 
-/* 所有页面的父组件 */
