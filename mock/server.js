@@ -7,6 +7,11 @@ router.get('/api/homead', function *(next) {
     this.body = require('./home/ad.js')
 });
 
+// 热门城市 
+router.get('/api/citylist', function *(next){
+    this.body = require('./city/hotcity.js')
+})
+
 // 首页 —— 推荐列表（猜你喜欢）
 var homeListData = require('./home/list.js')
 router.get('/api/homelist/:city/:page', function *(next) {
