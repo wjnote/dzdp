@@ -1,5 +1,6 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   context: __dirname + '/app', //源文件目录
@@ -43,32 +44,26 @@ module.exports = {
       }],
     }, {
       test: /\.css$/,
-      use: ["style-loader", "css-loader"]
+      use: ExtractTextPlugin.extract({
+        fallback: "style-loader",
+        use: "css-loader"
+      })
     }, {
       test: /\.less$/,
-      use: ["style-loader", "css-loader", "less-loader"]
-    }, {
-      test: /\.(png|gif|jpg|jpeg|bmp)$/i,
-      use: [{
-        loader: 'url-loader',
-        options: {
-          limit: '5000'
-        }
-      }]
-    }, {
+      use: ExtractTextPlugin.extract({
+        fallback: "style-loader",
+        use: ["css-loader", "less-loader"]
+      })
+    },{
       test: /\.(png|woff|woff2|svg|ttf|eot)($|\?)/i,
-      use: [{
-        loader: 'url-loader',
-        options: {
-          limit: '5000'
-        }
-      }]
+      use: [{ loader: 'url-loader', options: { limit: '5000' } }]
     }]
   },
   plugins: [
     // html 模板插件
     new HtmlWebpackPlugin({
       template: __dirname + '/index.tmpl.html'
-    })
+    }),
+    new ExtractTextPlugin("style.css")
   ]
 };
