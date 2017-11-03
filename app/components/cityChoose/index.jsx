@@ -8,7 +8,9 @@ class CityChoose extends React.Component {
   }
   render() {
     return (
-      <div className="citychoose">{this.props.city}</div>
+      <div className="city-choosed">
+      		<h2>{this.props.city}</h2>
+      </div>
     )
   }
 }
