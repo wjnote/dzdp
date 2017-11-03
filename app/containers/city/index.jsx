@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { hashHistory } from 'react-router';
 import { bindActionCreators } from 'redux';
-import Header from '../../components/Header';
+import CommonHeader from '../../components/commonHeader';
 import CityChoose from '../../components/cityChoose';
 import CityList from '../../components/cityList';
 import LocalStore from '../../util/localStore';
@@ -24,8 +24,10 @@ class City extends React.Component {
 
     return (
     	<div>
-      		<Header title={this.state.title}/>
+      		<CommonHeader title={this.state.title}/>
+
           <CityChoose city={userinfo.cityName}/>
+          
           <CityList citylist={this.state.cityList} changecity={this.changeChooseCity.bind(this)}/>
     	</div>
     )
