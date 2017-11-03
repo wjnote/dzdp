@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactSwipe from 'react-swipe'
+import {Link, hashHistory} from 'react-router';
 import {Carousel} from 'antd';
 import './style.less';
 
+/* 首页轮播组件 */
 class Category extends React.Component {
   constructor(props) {
     super(props);
@@ -21,47 +23,197 @@ class Category extends React.Component {
     }
     return (
       <div className="category">
-     		<ReactSwipe className="carousel" swipeOptions={option}>
+     	<ReactSwipe className="carousel" swipeOptions={option}>
             <div className="carousel-wrap">
             	<ul>
-            		<li className="meishi">美食</li>
-            		<li>电影</li>
-            		<li>酒店</li>
-            		<li>休闲娱乐</li>
-            		<li>外卖</li>
-            		<li>火锅</li>
-            		<li>丽人</li>
-            		<li>度假出行</li>
-            		<li>足底按摩</li>
-            		<li>周边游</li>
+            		<Link to="/search/meishi">
+                        <li>
+                            <span className="meishi"></span>
+                            <p>美食</p>
+                        </li>
+                    </Link>
+            		<Link to="/search/movie">
+                        <li>
+                            <span className="dianying"></span>
+                            <p>电影</p>
+                        </li>
+                    </Link>
+            		<Link to="/search/jiudian">
+                        <li>
+                            <span className="jiudian"></span>
+                            <p>酒店</p>
+                        </li>
+                    </Link>
+            		<Link to="/search/ylfs">
+                    <li>
+                            <span className="xiuxianyule"></span>
+                            <p>休闲娱乐</p>
+                        </li>
+                    </Link>
+            		<Link to="/search/waimai">
+                        <li>
+                            <span className="waimai"></span>
+                            <p>外卖</p>
+                        </li>
+                    </Link>
+            		<Link to="/search/huoguo">
+                        <li>
+                            <span className="huoguo"></span>
+                            <p>火锅</p>
+                        </li>
+                    </Link>
+            		<Link to="/search/liren">
+                        <li>
+                            <span className="liren"></span>
+                            <p>丽人</p>
+                        </li>
+                    </Link>
+            		<Link to="/search/dujiachuxing">
+                        <li>
+                            <span className="dujiachuxing"></span>
+                            <p>度假出行</p>
+                        </li>      
+                    </Link>
+            		<Link to="/search/zudianmo">
+                        <li>
+                            <span className="zudianmo"></span>
+                            <p>足底按摩</p>
+                        </li>      
+                    </Link>
+            		<Link to="/search/zhoubianyou">
+                        <li>
+                            <span className="zhoubianyou"></span>
+                            <p>周边游</p>
+                        </li>
+                    </Link>
             	</ul>
             </div>
             <div className="carousel-wrap">
             	<ul>
-            		<li>景点</li>
-            		<li>KTV</li>
-            		<li>购物</li>
-            		<li>生活服务</li>
-            		<li>运动健身</li>
-                    <li>美发</li>
-                    <li>亲子</li>
-                    <li>小吃快餐</li>
-                    <li>自助餐</li>
-            		<li>酒吧</li>
+            		<Link to="/search/jingdian">
+                        <li>
+                            <span className="jingdian"></span>
+                            <p>景点</p>
+                        </li>      
+                    </Link>
+            		<Link to="/search/KTV">
+                        <li>
+                            <span className="KTV"></span>
+                            <p>KTV</p>
+                        </li>      
+                    </Link>
+            		<Link to="/search/shopping">
+                        <li>
+                            <span className="shopping"></span>
+                            <p>购物</p>
+                        </li>    
+                    </Link>
+            		<Link to="/search/shenghuofuwu">
+                        <li>
+                            <span className="shenghuofuwu"></span>
+                            <p>生活服务</p>
+                        </li>        
+                    </Link>
+            		<Link to="/search/yundongjianshen">
+                        <li>
+                            <span className="yundongjianshen"></span>
+                            <p>运动健身</p>
+                        </li>         
+                    </Link>
+                    <Link to="/search/meifa">
+                        <li>
+                            <span className="meifa"></span>
+                            <p>美发</p>
+                        </li>   
+                    </Link>
+                    <Link to="/search/qinzi">
+                        <li>
+                            <span className="qinzi"></span>
+                            <p>亲子</p>
+                        </li>   
+                    </Link>
+                    <Link to="/search/xiaochikuaican">
+                        <li>
+                            <span className="xiaochikuaican"></span>
+                            <p>小吃快餐</p>
+                        </li>
+                    </Link>
+                    <Link to="/search/zizucan">
+                        <li>
+                            <span className="zizucan"></span>
+                            <p>自助餐</p>
+                        </li>
+                    </Link>
+            		<Link to="/search/jiuba">
+                        <li>
+                            <span className="jiuba"></span>
+                            <p>酒吧</p>
+                        </li>      
+                    </Link>
             	</ul>
             </div>
             <div className="carousel-wrap">
             	<ul>
-            		<li>日本菜</li>
-            		<li>SPA</li>
-            		<li>结婚</li>
-            		<li>学习培训</li>
-            		<li>西餐</li>
-                    <li>火车机票</li>
-                    <li>烧烤</li>
-                    <li>家装</li>
-                    <li>宠物</li>
-            		<li>全部分类</li>
+            		<Link to="/search/ribencai">
+                        <li>
+                            <span className="ribencai"></span>
+                            <p>日本菜</p>
+                        </li>          
+                    </Link>
+            		<Link to="/search/SPA">
+                        <li>
+                            <span className="SPA"></span>
+                            <p>SPA</p>
+                        </li>          
+                    </Link>
+            		<Link to="/search/jiehun">
+                        <li>
+                            <span className="jiehun"></span>
+                            <p>结婚</p>
+                        </li>          
+                    </Link>
+            		<Link to="/search/xuexipeixun">
+                        <li>
+                            <span className="xuexipeixun"></span>
+                            <p>学习培训</p>
+                        </li>          
+                    </Link>
+            		<Link to="/search/xican">
+                        <li>
+                            <span className="xican"></span>
+                            <p>西餐</p>
+                        </li>          
+                    </Link>
+                    <Link to="/search/huochejipiao">
+                        <li>
+                            <span className="huochejipiao"></span>
+                            <p>火车机票</p>
+                        </li>
+                    </Link>
+                    <Link to="/search/shaokao">
+                        <li>
+                            <span className="shaokao"></span>
+                            <p>烧烤</p>
+                        </li>
+                    </Link>
+                    <Link to="/search/jiazhuang">
+                        <li>
+                            <span className="jiazhuang"></span>
+                            <p>家装</p>
+                        </li>
+                    </Link>
+                    <Link to="/search/chongwu">
+                        <li>
+                            <span className="chongwu"></span>
+                            <p>宠物</p>
+                        </li>
+                    </Link>
+            		<Link to="/search/quanbufenlei">
+                        <li>
+                            <span className="quanbufenlei"></span>
+                            <p>全部分类</p>
+                        </li>      
+                    </Link>
             	</ul>
             </div>
         </ReactSwipe>
