@@ -26,6 +26,28 @@ router.get('/api/homelist/:city/:page', function *(next) {
     this.body = homeListData
 });
 
+// 详情页获取店铺详情
+var detailData = require('./detail/info.js')
+router.get('/api/detail/info/:id', function *(next){
+    const params = this.params
+    const paramsID = params.id
+    console.log('该用户的ID：' + paramsID)
+
+    this.body = detailData
+})
+
+// 获取商品详情页的列表数据
+const comment = require('./detail/comment.js')
+router.get('/api/detail/comment/:id/:page', function *(next){
+    const params = this.params
+    const paramsID = params.id
+    const paramsPage = params.page
+    console.log('详情页访问ID：' + paramsID)
+    console.log('详情页访问页数：' + paramsPage)
+
+    this.body = comment
+})
+
 
 app.use(router.routes())
    .use(router.allowedMethods());
