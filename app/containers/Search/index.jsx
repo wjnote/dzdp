@@ -1,6 +1,7 @@
 import React from 'react'
-
 import SearchHeader from '../../components/SearchHeader';
+import Likelist from '../../components/Likelist'
+
 import './style.less';
 
 class Search extends React.Component {
