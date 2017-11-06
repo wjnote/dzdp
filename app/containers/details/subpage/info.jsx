@@ -3,6 +3,8 @@ import PureRenderMixin from 'react-addons-pure-render-mixin';
 import DetailInfo from '../../../components/DetailInfo'
 import { getInfoData } from '../../../fetch/detail/detail'
 
+import './style.less'
+
 class Info extends React.Component {
   constructor(props) {
     super(props);
@@ -29,10 +31,9 @@ class Info extends React.Component {
   	this.disposeData(infoData)
   }
   disposeData(result){
-  	result.then((res)=>{
+  	result.then((res) => {
   		return res.json()
-  	}).then((json)=>{
-  		console.log(json)
+  	}).then((json) => {
   		this.setState({
   			detailInfo: json
   		})
