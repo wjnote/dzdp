@@ -8,18 +8,19 @@ class Details extends React.Component {
   constructor(props) {
     super(props);
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
-    this.state = {
-      detailId : this.props.params
-    }
   }
   render() {
+    const id = this.props.params.id;
+
     return (
       <div>
         <div className="detail-header">
         		<CommonHeader title="店铺详情"/>
         </div>
-        <Info detailId={this.state.detailId}/>
-        <Comment detailId={this.state.detailId}/>
+
+        <Info detailId={id}/>
+
+        <Comment detailId={id}/>
       </div>
     )
   }
