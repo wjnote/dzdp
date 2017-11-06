@@ -2,6 +2,7 @@ import React from 'react';
 import {getListData} from '../../../fetch/home/home';
 import Likelist from '../../../components/Likelist';
 import LoadMore from '../../../components/LoadMore';
+
 import './style.less'
 
 class List extends React.Component {
