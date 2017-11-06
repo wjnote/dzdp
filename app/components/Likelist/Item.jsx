@@ -15,7 +15,7 @@ class Item extends React.Component {
              		<div className="likelist-definite-left fl">
              				<img src={data.img} alt="左侧的图片"/>
              		</div>
-                <Link to="/details/80" >
+                <Link to={"/details/" + data.id} >
                		<div className="likelist-definite-right fl">
         							<div className="definite-right-top">
                         <p className="definite-title fl">{data.title}</p>
