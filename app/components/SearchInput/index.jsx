@@ -11,7 +11,6 @@ class SearchInput extends React.Component {
     }
   }
   render() {
-    // console.log(this.props.parmer)
     return (
       <input  type="text" 
               className="search-input"
