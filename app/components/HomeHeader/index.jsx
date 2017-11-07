@@ -28,7 +28,9 @@ class HomeHeader extends React.Component{
 				</div>
 				{/* 个人中心 */}
 				<div className="header-right">
-					<i className="iconfont icon-shenfenzheng"></i>
+					<Link to="login">
+							<i className="iconfont icon-shenfenzheng"></i>
+					</Link>
 				</div>
 			</header>
 		)
