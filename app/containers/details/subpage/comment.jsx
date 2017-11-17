@@ -21,7 +21,7 @@ class Comment extends React.Component {
     return (
       <div className="detail-comment">
         <h2 className="detail-reviews">用户点评</h2>
-        
+
         <CommentList data={this.state.data}/>
 
         <LoadMore LodaMoreData={this.LoadingMore.bind(this)} isLoadMore={this.state.isLoadingMore}/>
@@ -35,7 +35,6 @@ class Comment extends React.Component {
   	const detailId = this.props.detailId;
   	const page = this.state.page;
   	const commentData = getCommentData(detailId,page);
-    console.log(commentData)
 
   	this.disposeData(commentData);
   }
