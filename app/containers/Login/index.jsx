@@ -21,14 +21,14 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className="login-warp">
+      <div className="login-box">
           <CommonHeader title="登陆"/>
           {
             this.state.checking
             ? <div>已经登录，跳转到用户中心！</div>
             : <LoginComponent clickHandle={this.handleClick.bind(this)}/>
           }
-          
+
       </div>
     )
   }
@@ -69,7 +69,8 @@ class Login extends React.Component {
 
   // 跳转到首页
   goIndexPage(){
-    hashHistory.push('/');
+    // 如果是已经登录直接跳转到用户中心页
+    hashHistory.push('/usercenter');
   }
 }
 
@@ -90,8 +91,8 @@ export default connect(
   mapDispatchToProps
 )(Login)
 
-/*  
-redux 和 react 一起使用时，需要封装吐出的组件 
+/*
+redux 和 react 一起使用时，需要封装吐出的组件
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as userinfoActionsFormOtherFile from '../actions/userinfo'
