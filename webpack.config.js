@@ -6,11 +6,12 @@ module.exports = {
   context: __dirname + '/app', //源文件目录
   entry: {
     app: './index.js', //在源文件目录下找 index文件，作为打包的入口文件
-    vendor: ['react', 'react-dom']
+    vendor: ['react', 'react-dom', 'redux', 'react-redux', 'react-router']
   },
   output: {
     path: __dirname + '/build/', //打包生成文件
-    filename: '[name].bundle.js', //文件名字
+    filename: '[name].[hash].js', //文件名字
+    chunkFilename: '[name].[hash].js'
   },
 
   devServer: { // 配置webpack-dev-server
@@ -30,7 +31,7 @@ module.exports = {
   },
   resolve: {
     // order matters, resolves left to right
-    extensions: ['*', '.js', '.jsx', '.less', '.css']
+    extensions: ['*', '.js', '.jsx', '.less', '.css'], //后缀名自动补全
   },
   module: {
     rules: [{
@@ -64,6 +65,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: __dirname + '/index.tmpl.html'
     }),
-    new ExtractTextPlugin("style.css")
+    new ExtractTextPlugin("[name].css")
   ]
 };
