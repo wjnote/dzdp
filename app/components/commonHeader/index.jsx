@@ -1,4 +1,5 @@
 import React from 'react'
+import { hashHistory } from "react-router"
 
 import '../../static/css/iconfont.css';
 import './style.less';
@@ -18,8 +19,15 @@ class CommonHeader extends React.Component {
     )
   }
   bandleFn(){
-  	window.history.back();
+    const backRouter = this.props.backRouter;
+
+    if(backRouter){
+      hashHistory.push(backRouter);
+    }else{
+      window.history.back();
+    }
   }
+
 }
 
 export default CommonHeader;
