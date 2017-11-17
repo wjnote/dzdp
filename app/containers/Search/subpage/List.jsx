@@ -67,8 +67,6 @@ class SearchList extends React.Component {
   // 在页面从新搜索时
   componentDidUpdate(prevProps, prevState) {
       const keyword = this.props.keyword
-      console.log(prevProps);
-      console.log(keyword);
 
       // 搜索条件完全相等时，忽略。重要！！！
       if (keyword === prevProps.keyword) {
