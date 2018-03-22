@@ -28,7 +28,6 @@ class Login extends React.Component {
             ? <div>已经登录，跳转到用户中心！</div>
             : <LoginComponent clickHandle={this.handleClick.bind(this)}/>
           }
-
       </div>
     )
   }
