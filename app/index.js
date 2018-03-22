@@ -13,8 +13,8 @@ import './static/css/common.less';
 // redux 第二步，生成store
 const store = configureStore();
 ReactDOM.render(
-  <Provider store = { store } > 
-			<RouteMap / > 
+  <Provider store = { store } >
+			<RouteMap />
 		</Provider>,
   document.getElementById('app')
 );
