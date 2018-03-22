@@ -8,8 +8,8 @@ class CityList extends React.Component {
   }
   render() {
     const cityList = this.props.citylist;
-    const cityHTML = cityList.length 
-    ? cityList.map((item, index)=>{
+    const cityHTML = cityList.length
+    ? cityList.map((item, index) => {
         return <li key={index}><span onClick={this.boundChangeCity.bind(this, {item})}>{item}</span></li>
     })
     : 'no data!'
@@ -17,8 +17,8 @@ class CityList extends React.Component {
     return (
       <div className="choosecitylist">
       	<p className="hotCity">热门城市</p>
-        <div className="choosecity-wrap clearfix"> 
-            {cityHTML} 
+        <div className="choosecity-wrap clearfix">
+            {cityHTML}
         </div>
       </div>
     )
