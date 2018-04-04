@@ -15,7 +15,7 @@ module.exports = {
   },
 
   devServer: { // 配置webpack-dev-server
-    host:'0.0.0.0',
+    host: '0.0.0.0',
     port: 9090,
     inline: true,
     contentBase: "./build",
@@ -55,9 +55,14 @@ module.exports = {
         fallback: "style-loader",
         use: ["css-loader", "less-loader"]
       })
-    },{
+    }, {
       test: /\.(png|woff|woff2|svg|ttf|eot)($|\?)/i,
-      use: [{ loader: 'url-loader', options: { limit: '5000' } }]
+      use: [{
+        loader: 'url-loader',
+        options: {
+          limit: '5000'
+        }
+      }]
     }]
   },
   plugins: [
