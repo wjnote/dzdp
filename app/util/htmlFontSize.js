@@ -1,15 +1,17 @@
 /**
-*  根据设备的宽度来计算根节点的大小，默认是的是使用 iphone6 的设计稿
-*/
-export default (function (doc, win) {
-    var docEl = doc.documentElement,
-   // orientationchange 事件 用来监听手机屏幕的反转
+ *  根据设备的宽度来计算根节点的大小，默认是的是使用 iphone6 的设计稿
+ */
+export default (function(doc, win) {
+  var dpr = win.devicePixelRatio || 1,
+    docEl = doc.documentElement,
+    // orientationchange 事件 用来监听手机屏幕的反转
     resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-    recalc = function () {
-      var clientWidth = docEl.clientWidth;//(window.innerWidth);UC 或者QQ 安卓4.0 以下原生浏览器下面是没有
+    recalc = function() {
+      var clientWidth = docEl.clientWidth; //(window.innerWidth);UC 或者QQ 安卓4.0 以下原生浏览器下面是没有
       if (!clientWidth) return;
-      
-       docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+
+      docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+      docEl.setAttribute('data-dpr', dpr);
     };
 
   if (!doc.addEventListener) return;
