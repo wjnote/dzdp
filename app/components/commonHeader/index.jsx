@@ -10,7 +10,7 @@ class CommonHeader extends React.Component {
   }
   render() {
     return (
-    	<div className="header-component clearfix">
+    	<div className="header-component">
         <span className= "header-icon fl" onClick={this.bandleFn.bind(this)}>
           <i className="iconfont icon-huise common-back" ></i>
         </span>

@@ -25,10 +25,10 @@ class Ad extends React.Component {
       return res.json();
     }).then((json) => {
       const data = json;
-      if(data.length){
-      	this.setState({
-      		data
-      	})
+      if (data.length) {
+        this.setState({
+          data
+        })
       }
     })
   }
