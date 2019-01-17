@@ -15,8 +15,8 @@ module.exports = {
   },
 
   devServer: { // 配置webpack-dev-server
-    host: '0.0.0.0',
-    port: 9090,
+    host: '127.0.0.1',
+    port: 9000,
     inline: true,
     contentBase: "./build",
     historyApiFallback: true,

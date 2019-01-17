@@ -12,15 +12,16 @@
   "author": "wujun",
   "license": "ISC",
   "devDependencies": {
-    "extract-text-webpack-plugin": "^3.0.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.5",
-    "html-webpack-plugin": "^2.30.1",
+    "html-webpack-plugin": "^3.2.0",
     "koa": "^1.2.2",
     "koa-body": "^1.6.0",
     "koa-router": "^5.4.0",
     "url-loader": "^0.6.2",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.8.2"
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": ">=3.1.11"
   },
   "dependencies": {
     "antd": "^3.7.1",
